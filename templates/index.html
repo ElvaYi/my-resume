@@ -1,0 +1,59 @@
+{% extends "home-base.html"%}
+{% block title %}Home Page{% endblock %}
+{% block head%}
+  {{ super() }}
+{% endblock%}
+{% block page_content%}
+
+  <!-- Page Content -->
+  <div class="container">
+    <h1 class="mt-5"><i class="fa fa-bullhorn" aria-hidden="true"></i> Welcome to Qian Yi's Resume Home Page!</h1>
+    <h1 class="mb-0">Qian Yi</h1>
+    <p>Email: elva@udel.edu <br>
+    Senior Undergraduate Student in University of Delaware <br>
+    Finance and Management Information System Double Major
+    </p>
+  </div>
+  <!--Background img-->
+<img src="{{url_for('static',filename='img/home-bg.jpg') }}">
+
+<!-- Footer -->
+<footer>
+<p>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-md-10 mx-auto">
+      <ul class="list-inline text-center">
+        <li class="list-inline-item">
+          <a href="https://twitter.com/">
+            <span class="fa-stack fa-lg">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+            </span>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a href="https://facebook.com">
+            <span class="fa-stack fa-lg">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+            </span>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a href="https://www.instagram.com/">
+            <span class="fa-stack fa-lg">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+            </span>
+          </a>
+        </li>
+      </ul>
+      <p class="copyright text-muted">Copyright &copy; Qian Yi Website 2017</p>
+    </div>
+  </div>
+</div>
+</p>
+</footer>
+
+{% endblock%}

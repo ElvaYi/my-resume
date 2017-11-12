@@ -1,0 +1,65 @@
+{% extends "home-base.html"%}
+{% block title %}About{% endblock %}
+
+{% block head%}
+  {{ super() }}
+{% endblock%}
+
+{% block page_content%}
+  <!-- Page Content -->
+  <div class="container">
+    <h1 class="mt-5"><i class="fa fa-address-card-o" aria-hidden="true"></i> About Me</h1>
+    <p>My name is Qian Yi, a senior undergraduate student attending the University of Delaware,
+      double major in FInance and Management Information System.
+       <a id="developer" href="https://github.com/ElvaYi" data-toggle="tooltip" data-placement="top" title="Currently dying in MISY350 homework">Visit Qian Yi's Github web page</a>.</p>
+  </div>
+  <!--Background img-->
+<img src="{{url_for('static',filename='img/home-bg.jpg') }}">
+{% endblock%}
+
+{% block scripts%}
+  {{super()}}
+  <script>
+  $(document).ready(function () {
+    $('#developer').tooltip()
+  });
+  </script>
+  <!-- Footer -->
+  <footer>
+    <p>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <ul class="list-inline text-center">
+            <li class="list-inline-item">
+              <a href="https://twitter.com/">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://facebook.com">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://www.instagram.com/">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          </ul>
+          <p class="copyright text-muted">Copyright &copy; Qian Yi Website 2017</p>
+        </div>
+      </div>
+    </div>
+  </p>
+  </footer>
+{% endblock%}
