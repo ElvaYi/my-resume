@@ -1,5 +1,5 @@
 from flask_script import Manager
-from songbase import app
+from resume import app
 
 manager = Manager(app)
 
