@@ -1,0 +1,21 @@
+{% extends "home-base.html"%}
+{% block title %}Add Professors{% endblock %}
+{% block page_content%}
+
+  <!-- Page Content -->
+  <div class="container">
+    <h1 class="mt-5"><i class="fa fa-user-circle-o" aria-hidden="true"></i> Add Professors:</h1>
+    <form action="/professor/add" method="post">
+      <div class="form-group">
+        <label>Name</label>
+        <input class="form-control" type="text" name="name" placeholder="Name of the Professor" required="true">
+      </div>
+      <div class="form-group">
+        <label>Department</label>
+        <textarea class="form-control" name="department" placeholder="Department for this professor" required="true"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Add Professor</button>
+    </form>
+  </div>
+
+{% endblock%}
