@@ -25,7 +25,7 @@ class Course(db.Model):
     __tablename__ = 'courses'
     id = db.Column(db.Integer, primary_key=True)
     coursenumber = db.Column(db.String(256))
-    title = db.Column(db.String(256))
+    title = db.Column(db.Text)
     description = db.Column(db.Text)
     professor_id = db.Column(db.Integer, db.ForeignKey('professors.id'))
 
@@ -89,15 +89,15 @@ def add_courses():
         # get data from the form
         coursenumber = request.form['coursenumber']
         title = request.form['title']
-        description = request.form['discription']
+        description = request.form['description']
         professor_name = request.form['professor']
         professor = Professor.query.filter_by(name=professor_name).first()
         course = Course(coursenumber=coursenumber, title=title, description=description, professor=professor)
 
-    # insert the data into the database
-    db.session.add(course)
-    db.session.commit()
-    return redirect(url_for('show_all_courses'))
+        # insert the data into the database
+        db.session.add(course)
+        db.session.commit()
+        return redirect(url_for('show_all_courses'))
 
 
 @app.route('/course/edit/<int:id>', methods=['GET', 'POST'])
